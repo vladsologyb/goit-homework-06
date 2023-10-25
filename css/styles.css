@@ -38,8 +38,10 @@ img {
 
 .container {
     max-width: 320px;
-    padding: 0 15px;
-    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .header-container {
@@ -220,10 +222,11 @@ flex-wrap: wrap;
 }
 
 .features-item {
-    display: flex;
+    width: 100%;
+    /* display: flex;
     flex-direction: column;
     gap: 8px;
-    /* width: calc((100% - 24px*3) / 4); */
+    width: calc((100% - 24px*3) / 4); */
 }
 
 .features-item-icon {
@@ -383,12 +386,12 @@ color:  #434455;
 .portfolio-menu {
 display: flex;
 flex-wrap: wrap;
-column-gap: 24px;
-row-gap: 48px;
+gap: 48px;
 
 }
 
 .portfolio-item {
+    width: 100%;
 /* width: calc((100% - 48px) / 3); */
 transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -397,6 +400,10 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 2px 1px rgba(46, 47, 66, 0.08);;
+}
+
+.portfolio-img {
+    margin: 0 auto;
 }
 
 .portfolio-item:hover .portfolio-cover-text {
@@ -450,17 +457,31 @@ padding: 32px 16px;
 
 .footer {
     background: #2E2F42;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 96px;
+        padding-bottom: 96px;
+    /* padding-top: 100px;
+    padding-bottom: 100px; */
 }
 
 .footer-box {
     display: flex;
-    align-items: baseline;
+    align-items: center;
+    /* align-items: baseline; */
+    flex-wrap: wrap;
+    justify-content: center;
+    /* gap: 72px; */
 }
 
 .footer-container {
-    margin-right: 120px;
+    display: flex;
+    gap: 16px;
+    margin-bottom: 72px;
+    /* flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    /* padding: 0;
+    margin: 0; */
+    /* margin-right: 120px; */
 }
 
 .footer-logo {
@@ -490,9 +511,16 @@ padding: 32px 16px;
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
-        max-width: 264px;
+        max-width: 288px;
 }
 
+.footer-soc-container {
+    /* display: flex;
+     flex-wrap: wrap; */
+    align-items: center;
+    justify-content: center;
+     /* margin: 0 auto; */
+}
 
 .footer-soc-text {
     color: #FFF;
@@ -501,13 +529,16 @@ padding: 32px 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
         margin-bottom: 16px;
-     
+    align-items: center;
+        justify-content: center;
+        display: flex;
 }
 
 .footer-soc-menu {
     display: flex;
     gap: 16px;
-   
+   align-items: center;
+    justify-content: center;
 }
 
 .footer-soc-list {
@@ -536,6 +567,10 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-subscribe-container {
+    /* display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; */
     margin-left: auto;
 }
 
@@ -546,11 +581,16 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         line-height: 1.5;
         letter-spacing: 0.02em;
         margin-bottom: 16px;
+        display: block;
 }
 
 .footer-form {
+    /* max-width: 288px; */
     display: flex;
     gap: 24px;
+    /* flex-direction: column;
+    align-items: center;
+    margin: 0 auto; */
 }
 
 .footer-label {
@@ -559,7 +599,8 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-input {
-    width: 264px;
+    width: 288px;
+    /* width: 264px; */
     height: 40px;
     border-radius: 4px;
     border: 1px solid #ffffff;
@@ -822,6 +863,11 @@ border-color: #4d5ae5;
     background-color: #404bbf;
 }
 
+@media  and (min-width: 320px) {
+    .container {
+        max-width: 318px;
+    }
+}
 
 @media screen and (min-width: 768px) {
     .container {
@@ -836,6 +882,10 @@ border-color: #4d5ae5;
             width: calc((100% - 24px) / 2);
         }
 
+        .features-subtitle {
+            text-align: left;
+        }
+
  .team-menu {
     gap: 64px 24px;
  }       
@@ -844,8 +894,13 @@ border-color: #4d5ae5;
     width: calc((100%-24px*2) / 4);
 }
 
+.portfolio-menu {
+    gap: 24px;
+    row-gap: 72px;
+}
+
 .portfolio-item {
-    flex-basis: calc((100% - 24px) / 2);
+    width: calc((100% - 24px) / 2);
 }
 
 }
@@ -896,6 +951,11 @@ border-color: #4d5ae5;
 .portfolio {
 padding-top: 120px;
 padding-bottom: 120px;
+}
+
+.portfolio-menu {
+gap: 24px;
+row-gap: 48px;
 }
 
 .portfolio-item {
