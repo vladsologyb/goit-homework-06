@@ -89,7 +89,6 @@ img {
 
 .header-menu {
     display: none;
-    /* display: flex; */
     gap: 40px;
 }
 
@@ -134,7 +133,7 @@ color: #404bbf
 .contacts-menu {
     display: none;
     /* display: flex; */
-    gap: 40px;
+    /* gap: 40px; */
     /* align-items: center; */
 }
 
@@ -305,29 +304,39 @@ color: #404bbf
 /* =============hero===================== */
 
 .hero {
-    max-width: 1440px;
-    padding-top: 188px;
-    padding-bottom: 188px;
+    max-width: 320px;
+    padding-top: 72px;
+    padding-bottom: 72px;
     background: #2E2F42;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/herobg.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/herobg-mob.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
+    margin: 0 auto;
     
+}
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/herobg-mob-2x.jpg);
+    }
 }
 
 .hero-title {
     color: #FFF;
         text-align: center;
-        font-size: 56px;
+        font-size: 36px;
         font-weight: 700;
         line-height: 1.07;
         letter-spacing: 0.02em;
         margin-bottom: 48px;
-        max-width: 496px;
+        max-width: 169px;
        margin: 0 auto;
-       margin-bottom: 48px;
+       margin-bottom: 72px;
 }
 
 .hero-buy-btn {
@@ -1026,17 +1035,56 @@ border-color: #4d5ae5;
     background-color: #404bbf;
 }
 
-/* @media  and (min-width: 320px) {
+@media screen and (min-width: 320px) {
     .container {
         max-width: 318px;
+        margin-left: auto;
+        margin-right: auto;
     }
-} */
+}
 
 @media screen and (min-width: 768px) {
     .container {
-            max-width: 768px;
+        min-width: 768px;
+    }
+
+    .header-menu {
+        display: flex;
     }
     
+   
+
+    .contacts-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .menu-open-btn {
+        display: none;
+    }
+     
+    .hero {
+        min-width: 768px;
+        padding-top: 112px;
+        padding-bottom: 112px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/herobg-tab.jpg);
+    }
+
+        @media screen and (min-resolution: 192dpi) and (min-width: 768px),
+        screen and (min-resolution: 2dppx) and (min-width: 768px),
+        screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
+            .hero {
+                background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/herobg-tab-2x.jpg);
+            }
+        }
+        
+    .hero-title {
+     max-width: 496px;
+     margin-bottom: 36px;
+     font-size: 56px;
+    }
+
         .features-menu {
             gap: 72px 24px;
         }
@@ -1090,9 +1138,44 @@ text-align: left;
 }
 
 @media screen and (min-width: 1158px) {
-        .container {
-           
-            padding: 0 15px;
+.container {
+    min-width: 1158px;       
+    padding: 0 15px;
+}
+
+.header {
+    align-items: center;
+}
+
+.header-container {
+    /* padding-left: 156px;
+    padding-right: 156px; */
+}
+
+.header-menu {
+
+}
+
+.contacts-menu {
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero {
+    min-width: 1440px;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/herobg.jpg);
+    padding-top: 188px;
+    padding-bottom: 188px;
+}
+
+.hero-container {
+
+}
+
+.hero-title {
+    margin-bottom: 48px;
+    
 }
 
 .features-menu {
